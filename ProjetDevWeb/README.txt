@@ -1,3 +1,4 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/Tushkiz/pen/xqfsy.
+ProjetDevWeb est le dossier complet du site internet MARCACHAT
 
- Simple Login Form with Flat UI
+A copier dans wamp/www/ au complet.
+Créer des dossier js et php si besoin
