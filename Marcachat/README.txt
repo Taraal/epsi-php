@@ -1,3 +1,5 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/Tushkiz/pen/xqfsy.
+Marcachat = dossier principal du site
 
- Simple Login Form with Flat UI
+A placer dans wamp/www/
+
+Créer des dossiers js et php si besoin
