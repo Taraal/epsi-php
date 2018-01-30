@@ -31,14 +31,23 @@ color: #777;
 padding:10px
 }
 
+img{
+    max-height: 50px;
+}
+
 .logo{
 padding:30px;
 position:fixed;
 margin:15px;
+top:0%;
+}
+
+#marcassin{
+    left:-10%;
 }
 
 #chat{
-    left:85%;
+    left:65%;
 }
 
 .login-form {
