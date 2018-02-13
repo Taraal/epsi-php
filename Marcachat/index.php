@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MARCACHAT</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">   
 </head>
 
@@ -35,7 +35,7 @@
 			<label class="login-field-icon fui-lock" for="login-pass"></label>
 			</div>
 
-                        <a class="btn btn-primary btn-large btn-block" href="#">Se connecter</a>
+                        <a class="btn btn-primary btn-large btn-block" href="http://localhost/Marcachat/Accueil.php">Se connecter</a>
                     </div>
 		</div>
 	</div>
