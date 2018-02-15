@@ -5,11 +5,13 @@ box-sizing: border-box;
 *:focus {
 outline: none;
 }
+
 body {
 font-family: Arial;
 background-color: #3498DB;
 padding: 50px;
 }
+
 .login {
 margin: 20px auto;
 position: fixed;
@@ -18,6 +20,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 width: 300px;
 }
+
 .login-screen {
 background-color: #FFF;
 padding: 20px;
@@ -53,6 +56,7 @@ top:0%;
 .login-form {
 text-align: center;
 }
+
 .control-group {
 margin-bottom: 10px;
 }
