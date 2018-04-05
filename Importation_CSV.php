@@ -16,7 +16,7 @@
             
             <br>
 
-            <form method="post" enctype="multipart/form-data" action="import.php">
+            <form method="POST" enctype="multipart/form-data" action="import.php">
 
                 <input name="userfile" type="file" value="table"><br>
                 <input class="btn btn-default" name="submit" type="submit" value="Importer">
