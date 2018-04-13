@@ -4,7 +4,7 @@ session_start();
 
 $id_user = $_POST['id_no'];
 $id_salon = $_POST['salon_no'];
-$id_salon_local = $_POST['salon_local'];
+
 
 
 $bdd = new PDO("mysql:host=".config::SERVERNAME.";dbname=".config::DBNAME, config::USER, config::PASSWORD);
@@ -16,4 +16,4 @@ $invit_del->bindParam('id_user', $id_user);
 $invit_del->execute();
 
 
-header('location: salons.php?id='.$id_salon_local);
+header('location: accueil.php');

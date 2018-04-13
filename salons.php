@@ -192,10 +192,12 @@ echo " </div>";
     
   echo  "</a>
             <form id='delete' action='supprimer-salon.php' method='POST'>
-                <input type='hidden' name='id_salon_delete' value='".$id_salon."'>
+                <input type='hidden' name='id_salon_delete' value='.$id_salon'.>
                 <button style='position: relative; left: 2%;' class='btn btn-danger glyphicon glyphicon-remove'></button>
             </form>";
 }
+
+
 
 ?>
     <hr style="margin-left: 20px;margin-right: 20px;">
@@ -204,12 +206,30 @@ echo " </div>";
 <?php 
     foreach($select_message as $message){
       if($message['id_utilisateur'] != $id_session){
-      echo "<div class='Message'><br><b>" . $message['prenom'] . "</b><br><br>" . $message['contenu'] . "<br><br></div>";
+          echo "<div class='Message'><br><b>" . $message['prenom'] . "</b>";
+          if($statement_admin->rowcount() == 1){
+            echo "<form id='deletemessageadmin' action='supprimer_message.php' method='POST'>
+                <input id='id_salon_delete' type='hidden' name='id_salon_delete' value=".$id_salon.">
+                <input id='id_message_delete' type='hidden' name='id_message_delete' value=".$message['id'].">
+                <button class='btn btn-danger glyphicon glyphicon-remove'></button>
+                </form>";
+          }   
+          echo "<br><br>" . $message['contenu'] . "<br><br></div>";
+          
       }
       else if ($message['id_utilisateur'] == $id_session){
-            echo "<div class='Messagev2'><br><b>" . $message['prenom'] . "</b><br><br>" . $message['contenu'] . "<br><br></div>";
+          echo "<div class='Messagev2'><br><b>" . $message['prenom'] . "</b>";
+          
+            echo "<form id='deletemessage' action='supprimer_message.php' method='POST'>
+                <input id='id_salon_delete' type='hidden' name='id_salon_delete' value=".$id_salon.">
+
+                <input id='id_message_delete' type='hidden' name='id_message_delete' value=".$message['id'].">
+                <button class='btn btn-danger glyphicon glyphicon-remove'></button>
+                </form>";
+          
+          echo "<br><br>" . $message['contenu'] . "<br><br></div>";
       }
-      }
+    }
 ?>
              </div>
         </div>

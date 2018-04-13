@@ -1,4 +1,5 @@
 <?php include_once 'config.php';
+include_once 'Bootstrap.php';
 
 session_start();
 
@@ -24,7 +25,12 @@ $statement_salon = $bdd->prepare("SELECT s.id, s.nom FROM salons AS s JOIN utili
   $statement_salon->execute();
   $select_salon = $statement_salon->fetchAll();
 
- 
+
+$select_invit = $bdd->prepare("SELECT s.id, s.nom FROM salons s JOIN invitations i ON s.id = i.id_salon JOIN utilisateurs u ON u.id = i.id_utilisateur WHERE s.id = i.id_salon AND i.id_utilisateur = :idsession");
+$select_invit->bindParam('idsession', $id_session);
+$select_invit->execute();
+$invitations = $select_invit->fetchAll();
+
 ?>
 <!DOCTYPE html>
    
@@ -66,13 +72,61 @@ $statement_salon = $bdd->prepare("SELECT s.id, s.nom FROM salons AS s JOIN utili
 ?>  
                           </ul>
                 </div>
-                <div class="subtitle" id="AideV" >
+
+
+                <div class="subtitle" id="GestionV">
+                    <h3>Invitations</h3>
+                        <ul>
+
+<?php
+    
+    foreach($invitations as $invit){
+        echo "
+            <li>
+            <a>" .$invit['nom'] ."</a>
+           
+            <form id='accepter' action='accepter.php' method='POST'>
+            <input id='id_yes' type='hidden' name='id_yes' value='$id_session'>
+            <input id='salon_yes' type='hidden' name='salon_yes' value=".$invit['id'].">
+            <button class='btn btn-success glyphicon glyphicon-plus'></button>
+            </form>
+
+            <form id='refuser' action='refuser.php' method='POST'>
+            <input id='id_no' type='hidden' name='id_no' value='$id_session'>
+            
+            <input id='salon_no' type='hidden' name='salon_no' value=".$invit['id'].">
+            
+            <button class='btn btn-danger glyphicon glyphicon-remove'></button>
+            </form>
+            </li>";
+    }
+?>
+                        </ul>
+                </div>
+
+<div class="subtitle" id="AideV" >
                     <h3>Aide</h3>
                 </div>
             </nav>
         </div>
         
     </div>
+
+        <div class="Creer_Salon">
+            <h2>Voulez-vous créer un salon ?</h2>
+            <form id="formulaire" action="ajouter_salon.php" method="post">
+                
+                <div class="control-group" style="margin-top: 50px;">
+                    <input id='nomsalon' type="text" class="login-field"  placeholder="Nom du Salon" id="login-name" name="salon" required>
+                    <input id='session' type='hidden' name='id_session' value="<?php echo "$id_session"; ?>">                   
+ <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+                <input class="btn btn-primary btn-large btn-block" type="submit" value="Créer">
+            </form>
+        </div>
+
+
+
 <?php
   
 }
