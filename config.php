@@ -9,11 +9,11 @@
 /**
  * Description of config
  *
- * @author Dylan
+ * @author Sylouan
  */
 class config {
     const SERVERNAME="localhost";
-    const DBNAME="taral";
-    const USER="Taral";
+    const DBNAME="csv";
+    const USER="root";
     const PASSWORD="modepasse1";
 }

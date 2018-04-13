@@ -1,3 +1,6 @@
+<?php include_once 'Bootstrap.php'; ?>
+
+<!DOCTYPE html>
 
 <html>
 
