@@ -1,0 +1,169 @@
+
+h5{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+b{
+    text-align: center;
+}
+
+#TitleChat{
+    border-radius: 5px;
+}
+
+#TitleUtilisateur{
+    border-radius: 5px;
+}
+
+#Chat{
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 375px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#Utilisateur{
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 425px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.Message{
+    float:left;
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 82%;
+    height: auto;
+    border:solid;
+    border-width:2px;
+    border-radius:5px;    
+    margin-bottom: 10px;
+    border-color: transparent;
+    background-color: lightblue;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.Messagev2{
+    float:right;
+    margin-right: 5%;
+    margin-left: 10%;
+    width: 82%;
+    height: auto;
+    border:solid;
+    border-width:2px;
+    border-radius:5px;    
+    margin-bottom: 10px;
+    border-color: transparent;
+    background-color: lightcoral;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+#EspaceChat{
+    height: 50%;
+}
+
+#POSTChat{
+    text-align: center;
+}
+
+.Champ{
+    float: left;
+    margin-right: 1%;
+    width: 83%;
+    height: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.boutton {
+    float: left;
+    margin-left: 5%;
+    border: 2px solid white;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 15%;
+    margin: 0 auto;
+}
+
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+.boutton:hover {
+    background-color: #2980B9;
+}
+
+#ModalUser{
+    margin-top: 50px;
+    height: 500px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+    #EspaceChat{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #EspaceUtilisateur{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #userportable{
+        display: none;
+    }
+    #EspaceBoutton{
+        display:initial;
+    }
+    #Espace1Bouton{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #EspaceChat{
+        margin-left: 10px;
+    }
+    #userportable{
+        display: initial;
+    }
+    #EspaceBoutton{
+        margin-top: 10px;
+    }
+    #Chat{
+        height: 325px;
+    }    
+    #EspaceUtilisateur{
+        display: none;
+    }
+    .Champ{
+        width: 70%;
+    }
+    .boutton {
+        width: 28%;
+    }
+    #Espace1Bouton{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,56 @@
+h2{
+    text-align: center;
+}
+
+.Creer_Salon{
+    margin-top: 5%;
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    border:2px solid transparent;
+}
+#formulaire{
+    text-align: center;    
+}
+.btn {
+    float: left;
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+}
+
+input {
+    float:left;
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 250px;
+    transition: border .5s;
+    width: 100%;
+}
+
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 767px) {
+    h2{
+        font-size: 25px;
+    }
+}
